@@ -1,9 +1,9 @@
-import { BackendStatus } from "./components/status/health";
+import { BackendStatus } from "./components/status/apiHealth";
 function App() {
   return (
     <main>
       <h1>Warframe Manager</h1>
-      <BackendStatus /> 
+      <BackendStatus />
     </main>
   );
 }

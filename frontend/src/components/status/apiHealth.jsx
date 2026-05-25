@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import checkHealth from "../../api/backend";
+import checkHealth from "../../api/health";
+
+const STATUS_CHECK_INTERVAL = 300000; // 5 minutes in milliseconds
 
 export function BackendStatus() {
     const [backendStatus, setBackendStatus] = useState("checking...");
@@ -8,7 +10,12 @@ export function BackendStatus() {
         async function updateStatus() {
             try {
                 const data = await checkHealth();
-                setBackendStatus(data.status);
+                console.log("Health check data for backend api:", data.status);
+                if (data.status == "ok") {
+                    setBackendStatus("online");
+                } else {
+                    setBackendStatus("offline");
+                }
             } catch {
                 setBackendStatus("offline");
             }
@@ -16,7 +23,7 @@ export function BackendStatus() {
 
         updateStatus();
 
-        const intervalId = setInterval(updateStatus, 300000);
+        const intervalId = setInterval(updateStatus, STATUS_CHECK_INTERVAL);
 
         return () => clearInterval(intervalId);
     }, []);
