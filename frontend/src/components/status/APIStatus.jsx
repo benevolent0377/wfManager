@@ -2,61 +2,66 @@ import { useState, useEffect } from "react";
 import checkHealth from "../../api/backendHealth";
 import checkServiceHealth from "../../api/serviceHealth";
 
-const STATUS_CHECK_INTERVAL = 300000; // 5 minutes in milliseconds
+const STATUS_CHECK_INTERVAL = 150000;
 
-function StatusDisplay({ label, checkFunction }) {
-    const [status, setStatus] = useState("checking...");
+export function getBatchStatus(statuses) {
+    const values = Object.values(statuses);
+
+    if (values.includes("checking...")) return "checking...";
+
+    const onlineCount = values.filter(
+        (status) => status === "online"
+    ).length;
+
+    const total = values.length;
+
+    if (onlineCount === total) return "online";
+    if (onlineCount > total / 2) return "warning";
+
+    return "offline";
+}
+
+export function useAPIStatuses() {
+    const [statuses, setStatuses] = useState({
+        backend: "checking...",
+        wfstat: "checking...",
+        market: "checking...",
+    });
 
     useEffect(() => {
-        async function updateStatus() {
-            try {
-                const data = await checkFunction();
+        async function updateStatuses() {
+            const checks = [
+                ["backend", checkHealth],
+                ["wfstat", () => checkServiceHealth("wfstat")],
+                ["market", () => checkServiceHealth("market")],
+            ];
 
-                if (data.status === "ok") {
-                    setStatus("online");
-                } else {
-                    setStatus("offline");
+            for (const [name, checkFunction] of checks) {
+                try {
+                    const data = await checkFunction();
+
+                    setStatuses((prev) => ({
+                        ...prev,
+                        [name]: data.status === "ok" ? "online" : "offline",
+                    }));
+                } catch {
+                    setStatuses((prev) => ({
+                        ...prev,
+                        [name]: "offline",
+                    }));
                 }
-            } catch {
-                setStatus("offline");
             }
         }
 
-        updateStatus();
+        updateStatuses();
 
-        const intervalId = setInterval(updateStatus, STATUS_CHECK_INTERVAL);
+        const intervalId = setInterval(
+            updateStatuses,
+            STATUS_CHECK_INTERVAL
+        );
 
         return () => clearInterval(intervalId);
-    }, [checkFunction]);
+    }, []);
 
-    return (
-        <p>{label} status: {status}</p>
-    );
-}
-
-export function BackendStatus() {
-    return (
-        <StatusDisplay
-            label="Backend"
-            checkFunction={checkHealth}
-        />
-    );
-}
-
-export function WfStatStatus() {
-    return (
-        <StatusDisplay
-            label="Warframe API"
-            checkFunction={() => checkServiceHealth("wfstat")}
-        />
-    );
-}
-
-export function MarketStatus() {
-    return (
-        <StatusDisplay
-            label="Market API"
-            checkFunction={() => checkServiceHealth("market")}
-        />
-    );
+    return statuses;
 }

@@ -1,0 +1,93 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #121312;
+    color: #fff;
+    height: 60px;
+}
+.left{
+    max-width: 75px;
+    max-height:75px;
+    width: 20%;
+    justify-content: center;
+}
+.left .logo {
+    padding: 10px;
+    height: auto;
+    max-width: 60px;
+    width: auto;
+}
+.center {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    min-width: 300px;
+    width: 70%;
+}
+.center input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+}
+.right {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    width: 10%;
+    min-width: 150px;
+}
+.right button {
+    color: #eee;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.right .status-dropdown .status-button {
+    font-size: 12px;
+    border-radius: 20px;
+    width: 110px;
+    background-color: #4f365f;
+    display: flex;
+    justify-content: space-between;
+}
+.right .status-dropdown .status-button .status-dot {
+    height: auto;
+    width: 10px;
+    padding-left: 5px;
+    margin: none;
+}
+.right .status-dropdown .status-card {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #4f365f;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.right .status-dropdown .status-card .status-dot {
+    height: auto;
+    width: 10px;
+    padding-left: 5px;
+    margin: none;
+}
+.right .status-dropdown .status-card p {
+    margin: 0;
+    padding: 5px 0;
+}
+.right .settings {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    padding: 5px;
+}
+.right .settings .settings-icon {
+    max-width: 20px;
+    padding: 2px;
+    height: auto;
+}

@@ -1,12 +1,36 @@
-import { BackendStatus, WfStatStatus, MarketStatus } from "./components/status/APIStatus";
+import { Header } from "./components/layout/Header";
+import {DashboardPage} from "./pages/Dashboard";
+import {MarketPage} from "./pages/Market";
+import {FissuresPage} from "./pages/Fissures";
+import {SettingsPage} from "./pages/Settings";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 function App() {
   return (
-    <main>
-      <h1>Warframe Manager</h1>
-      <BackendStatus />
-      <WfStatStatus />
-      <MarketStatus />
-    </main>
+    <BrowserRouter>
+      <AppFrame />
+    </BrowserRouter>
+  );
+}
+
+function AppFrame() {
+  return (
+    <div className="app-frame">
+      <Header />
+
+      <div className="app-body">
+        {/* <Sidebar /> */}
+
+        <main className="content">
+          <Routes>
+            <Route path="/" element={<DashboardPage />} />
+            <Route path="/market" element={<MarketPage />} />
+            <Route path="/fissures" element={<FissuresPage />} />
+            <Route path="/settings" element={<SettingsPage />} />
+          </Routes>
+        </main>
+      </div>
+    </div>
   );
 }
 
