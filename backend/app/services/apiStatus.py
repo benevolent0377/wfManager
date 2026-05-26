@@ -15,7 +15,7 @@ class APIInfo:
             self.statusCode = 404
             self.latency = None
             self.URL = "https://api.warframestat.us/pc"
-            self.lastChecked = datetime.datetime.now()
+            self.lastChecked = None
 
     class market:
         def __init__(self):
@@ -23,7 +23,7 @@ class APIInfo:
             self.statusCode = 404
             self.latency = None
             self.URL = "https://api.warframe.market/v2/"
-            self.lastChecked = datetime.datetime.now()
+            self.lastChecked = None
 
     async def checkServiceStatuses(self):
         print("Checking API statuses...")
@@ -31,7 +31,7 @@ class APIInfo:
             # Check wfstat
             start_time = time.time()
             try:
-                self.wfstat.lastChecked = datetime.datetime.now()
+                self.wfstat.lastChecked = datetime.datetime.now().strftime("%A, %Y-%m-%d %H:%M:%S")
                 response = await client.get(self.wfstat.URL, timeout=15)
                 self.wfstat.latency = time.time() - start_time
                 print(response.status_code)
@@ -48,7 +48,7 @@ class APIInfo:
             # Check market
             start_time = time.time()
             try:
-                self.market.lastChecked = datetime.datetime.now()
+                self.market.lastChecked = datetime.datetime.now().strftime("%A, %Y-%m-%d %H:%M:%S")
                 response = await client.get(self.market.URL, timeout=15)
                 self.market.latency = time.time() - start_time
                 self.market.statusCode = response.status_code

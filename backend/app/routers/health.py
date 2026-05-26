@@ -11,6 +11,7 @@ def systemHealth():
 async def wfstatHealth():
     APIInfo = await apiStatus.get()
     return {"status": APIInfo.wfstat.status,
+            "statusCode": APIInfo.wfstat.statusCode,
             "latency": APIInfo.wfstat.latency,
             "lastChecked": APIInfo.wfstat.lastChecked
             }
@@ -19,5 +20,6 @@ async def wfstatHealth():
 async def marketHealth():
     APIInfo = await apiStatus.get()
     return {"status": APIInfo.market.status,
+            "statusCode": APIInfo.market.statusCode,
             "latency": APIInfo.market.latency,
             "lastChecked": APIInfo.market.lastChecked}
