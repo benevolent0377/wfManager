@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import checkHealth from "../../api/health";
+import checkHealth from "../../api/backendHealth";
 
 const STATUS_CHECK_INTERVAL = 300000; // 5 minutes in milliseconds
 

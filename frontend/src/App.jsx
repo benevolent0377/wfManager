@@ -1,4 +1,4 @@
-import { BackendStatus } from "./components/status/apiHealth";
+import { BackendStatus } from "./components/status/APIStatus";
 function App() {
   return (
     <main>
