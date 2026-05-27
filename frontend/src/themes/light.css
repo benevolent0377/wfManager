@@ -1,0 +1,18 @@
+[data-theme = "light"] {
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+  --text: #000000;
+  --text-h: #2c2c2c;
+  --bg: #fff8f8;
+  --secondary-bg: #bdbdbd;
+  --border: #f0f2ff;
+  --code-bg: #1f2028;
+  --accent-bg: rgba(30, 78, 87, 0.795);
+  --accent: #c084fc;
+  --accent-bg: rgba(70, 196, 228, 0.15);
+  --accent-border: rgba(73, 230, 241, 0.5);
+  --social-bg: rgba(30, 46, 214, 0.5);
+  --shadow:
+}

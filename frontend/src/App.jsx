@@ -5,6 +5,8 @@ import {FissuresPage} from "./pages/Fissures";
 import {SettingsPage} from "./pages/Settings";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import "./themes/light.css";
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,7 +17,7 @@ function App() {
 
 function AppFrame() {
   return (
-    <div className="app-frame">
+    <div className="app-frame" data-theme="dark">
       <Header />
 
       <div className="app-body">
