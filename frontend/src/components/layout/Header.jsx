@@ -1,4 +1,5 @@
 import "./Header.css";
+import "../status/Status.css";
 import StatusDropdown from "../status/StatusDropdown";
 export function Header() {
 

@@ -11,7 +11,7 @@ function StatusDot({ status }) {
     }
     else if (
         status === "warning" ||
-        status === "checking..."
+        status === "checking"
     ) {
 
         src = "/src/assets/layout/status/warning-dot.svg";

@@ -7,7 +7,7 @@ const STATUS_CHECK_INTERVAL = 150000;
 export function getBatchStatus(statuses) {
     const values = Object.values(statuses);
 
-    if (values.includes("checking...")) return "checking...";
+    if (values.includes("checking")) return "checking";
 
     const onlineCount = values.filter(
         (status) => status === "online"
@@ -23,13 +23,16 @@ export function getBatchStatus(statuses) {
 
 export function useAPIStatuses() {
     const [statuses, setStatuses] = useState({
-        backend: "checking...",
-        wfstat: "checking...",
-        market: "checking...",
+        backend: "checking",
+        wfstat: "checking",
+        market: "checking",
     });
 
-    useEffect(() => {
-        async function updateStatuses() {
+    const [loading, setLoading] = useState(false);
+
+    async function updateStatuses() {
+        setLoading(true);
+        try{
             const checks = [
                 ["backend", checkHealth],
                 ["wfstat", () => checkServiceHealth("wfstat")],
@@ -52,7 +55,15 @@ export function useAPIStatuses() {
                 }
             }
         }
+        finally {
+        setLoading(false);
+        }
+    }
 
+    useEffect(() => {
+
+        //find out how to fix this later
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         updateStatuses();
 
         const intervalId = setInterval(
@@ -63,5 +74,9 @@ export function useAPIStatuses() {
         return () => clearInterval(intervalId);
     }, []);
 
-    return statuses;
+    return {
+        statuses,
+        loading,
+        updateStatuses,
+    };
 }

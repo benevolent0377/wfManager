@@ -1,0 +1,66 @@
+:root {
+    --status-color: #4caf50;
+}
+.status-dropdown {
+    position: relative;
+    display: inline-block;
+}
+.status-button {
+    font-size: 12px;
+    border-radius: 20px;
+    width: 110px;
+    background-color: var(--accent-bg);
+    display: flex;
+    justify-content: space-between;
+}
+.status-dot {
+    height: auto;
+    width: 10px;
+    padding-left: 10px;
+    margin: none;
+}
+.status-card {
+    position: absolute;
+    top: 37px;
+    right: 0px;
+    background-color: var(--secondary-bg);
+    padding: 10px;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+}
+.status-row {
+    margin-bottom: 5px;
+    border-radius: 8px;
+    height: auto;
+    width: 100%;
+}
+.status-reload-button {
+    background-color: var(--accent-bg);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 20px;
+
+}
+.online {
+    background-color: #00ff2a3d;
+}
+.checking {
+    background-color: #ff990091;
+}
+.offline {
+    background-color: #f443369c;
+}
+.status-card p {
+    padding: 3px;
+}
+
+.status-card h3 {
+    margin: 5px;
+}
