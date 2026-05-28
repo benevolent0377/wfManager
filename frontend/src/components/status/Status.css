@@ -16,6 +16,9 @@
     display: flex;
     justify-content: space-between;
 }
+.status-button p {
+    color: var(--text);
+}
 .status-dot {
     height: auto;
     width: 10px;

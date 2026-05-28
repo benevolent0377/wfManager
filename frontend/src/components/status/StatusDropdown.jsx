@@ -15,7 +15,7 @@ export function StatusDropdown() {
                 className="status-button"
                 onClick={() => setIsOpen(!isOpen)}
             >
-                Service Status
+                <p>Service Status</p>
                 <StatusDot status={batchStatus} />
             </button>
 

@@ -14,12 +14,26 @@ export function Sidebar() {
 
       <div className="sidebar-items">
 
-        <Link to="/"><div className="sidebar-item"><p>Dashboard</p></div></Link>
+        <Link to="/"><div className="sidebar-item"><p>My Dashboard</p></div></Link>
+
+        <Link to="/worldstates"><div className="sidebar-item"><p>Live Data</p></div></Link>
 
         <Link to="/market"><div className="sidebar-item"><p>Market</p></div></Link>
 
         <Link to="/reliquary"><div className="sidebar-item"><p>Reliquary</p></div></Link>
 
+        <Link to="/drops"><div className="sidebar-item"><p>Drop Tables</p></div></Link>
+
+        <Link to="/inventory"><div className="sidebar-item"><p>Inventory</p></div></Link>
+
+        <Link to="/codex"><div className="sidebar-item"><p>Codex</p></div></Link>
+
+        <Link to="/analytics"><div className="sidebar-item"><p>Analytics</p></div></Link>
+
+        <Link to="/overlay"><div className="sidebar-item"><p>Overlay Options</p></div></Link>
+
+        <Link to="/developer"><div className="sidebar-item"><p>Developer Options</p></div></Link>
+      
       </div>
 
       <div className="sidebar-footer">
@@ -32,7 +46,7 @@ export function Sidebar() {
 
         <div className="settings-container">
           <Link to="/settings">
-            <img src="src/assets/layout/settings-cog-dark.png" className="settings-icon"/> 
+            <img src="src/assets/dark/settings-cog.png" className="settings-icon"/> 
           </Link>
         </div>        
 

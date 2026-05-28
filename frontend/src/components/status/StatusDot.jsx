@@ -1,11 +1,11 @@
 function StatusDot({ status }) {
 
-    let src = "/src/assets/layout/status/offline-dot.svg";
+    let src = "/src/assets/status/offline-dot.svg";
     let alt = "Offline";
 
     if (status === "online") {
 
-        src = "/src/assets/layout/status/online-dot.svg";
+        src = "/src/assets/status/online-dot.svg";
         alt = "Online";
 
     }
@@ -14,7 +14,7 @@ function StatusDot({ status }) {
         status === "checking"
     ) {
 
-        src = "/src/assets/layout/status/warning-dot.svg";
+        src = "/src/assets/status/warning-dot.svg";
         alt = "Warning";
     }
 

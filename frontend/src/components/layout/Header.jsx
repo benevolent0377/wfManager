@@ -5,7 +5,7 @@ export function Header() {
         <header className="header">
             
             <div className="left">
-            <img src="/src/assets/layout/logo.png" alt="Warframe Manager" className="logo" />
+            <img src="/src/assets/logo.png" alt="Warframe Manager" className="logo" />
             <p className="title">Warframe Manager</p>
             </div>
 

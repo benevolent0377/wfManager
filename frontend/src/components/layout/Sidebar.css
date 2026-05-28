@@ -27,6 +27,8 @@
 
     transition: background 0.15s ease, color 0.15s ease;
 
+    background: radial-gradient(var(--gradient-a), var(--gradient-b));
+
     position: relative;
     overflow: hidden;
 }
@@ -45,12 +47,37 @@
     background: var(--accent);
 
     transition:
-        left 0.25s ease,
-        right 0.25s ease;
+        left 0.5s ease,
+        right 0.5s ease;
 }
 .sidebar-item:hover::after {
     left: 12%;
     right: 12%;
+}
+.sidebar-item::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gradient-a),
+        transparent
+        );
+
+    transform: scaleX(0);
+
+    transform-origin: center;
+
+    transition: transform 0.3s ease;
+
+    pointer-events: none;
+}
+.sidebar-item:hover::before {
+    transform: scaleX(1);
 }
 .sidebar a {
     text-decoration: none;
@@ -59,11 +86,10 @@
     font-size: 1.25rem;
 }
 .sidebar-item:hover {
-    background: var(--accent-bg);
-    color: var(--text);
+    color: var(--text-h);
 }
 
-.sidebar-item.active {
+.sidebar-item:active {
     background: var(--accent-bg);
     color: var(accent);
 }

@@ -191,7 +191,6 @@
     display: flex;
     flex-direction: row;
     background-color: var(--bg);
-    overflow: inherit;
     width: inherit;
     height: inherit;
     max-width: 100vw;
@@ -207,15 +206,29 @@
     background-color: var(--bg);
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;      
-    box-shadow: 5px 0px 5px var(--accent-bg);
-    margin-right: 20px;
+    box-shadow: 5px 0px 10px var(--accent-bg);
 }
 .content {
     width: auto;
     order: 2;
     flex-grow: 4;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: 3px;
+}
+.content-wrapper {
+    padding: 5px;
+    order: 1;
+    flex-grow: 2;
+    max-height: calc(100vh - 25px);
     background-color: var(--bg);
-    padding: 10px;
-
+}
+.footerbar-wrapper {
+  border-top: 1px solid var(--accent-bg);
+  order: 2;
+  height: 30px;
+  background-color: var(--secondary-bg);
+  min-width: 100%;
 }
