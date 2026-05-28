@@ -1,22 +1,40 @@
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
-    background-color: var(--secondary-bg);
+    padding: 10px;
+    background-color: var(--bg);
     color: var(--text-color);
     height: 60px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+    min-width: 100px;
+
 }
 .left{
-    max-width: 75px;
     max-height:75px;
-    width: 20%;
-    justify-content: center;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.left .title {
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+    margin: 0px;
+    padding: 7px;
+    order: 2;
+    flex-grow: 4;
 }
 .left .logo {
     padding: 10px;
     height: auto;
     max-width: 60px;
-    width: auto;
+    width: 100%;
+    order: 1;
+    flex-shrink: 2;
+
 }
 .center {
     display: flex;
@@ -46,15 +64,4 @@
     cursor: pointer;
     border-radius: 4px;
 }
-.right .settings {
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    padding: 5px;
-}
-.right .settings .settings-icon {
-    max-width: 20px;
-    padding: 2px;
-    height: auto;
-}
+

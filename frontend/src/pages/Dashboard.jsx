@@ -3,7 +3,7 @@ export function DashboardPage() {
     return (
 
         //placeholder
-        <div></div>
+        <div>This is the dashboard</div>
 
     );
 

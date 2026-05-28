@@ -3,7 +3,7 @@ import { getBatchStatus, useAPIStatuses } from "./APIStatus";
 import StatusRow from "./StatusRow";
 import StatusDot from "./StatusDot";
 
-function StatusDropdown() {
+export function StatusDropdown() {
     const [isOpen, setIsOpen] = useState(false);
 
     const { statuses, loading, updateStatuses } = useAPIStatuses();
@@ -15,7 +15,7 @@ function StatusDropdown() {
                 className="status-button"
                 onClick={() => setIsOpen(!isOpen)}
             >
-                API Status
+                Service Status
                 <StatusDot status={batchStatus} />
             </button>
 

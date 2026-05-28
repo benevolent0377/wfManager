@@ -1,10 +1,10 @@
-import { Header } from "./components/layout/Header";
+import { Sidebar } from "./components/layout/Sidebar";
 import {DashboardPage} from "./pages/Dashboard";
 import {MarketPage} from "./pages/Market";
-import {FissuresPage} from "./pages/Fissures";
+import {ReliquaryPage} from "./pages/Reliquary";
 import {SettingsPage} from "./pages/Settings";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import "./themes/App.css";
 import "./themes/light.css";
 
 function App() {
@@ -18,16 +18,17 @@ function App() {
 function AppFrame() {
   return (
     <div className="app-frame" data-theme="dark">
-      <Header />
 
       <div className="app-body">
-        {/* <Sidebar /> */}
+        <div className="sidebar-container">
+          <Sidebar />
+        </div>
 
         <main className="content">
           <Routes>
             <Route path="/" element={<DashboardPage />} />
             <Route path="/market" element={<MarketPage />} />
-            <Route path="/fissures" element={<FissuresPage />} />
+            <Route path="/reliquary" element={<ReliquaryPage />} />
             <Route path="/settings" element={<SettingsPage />} />
           </Routes>
         </main>

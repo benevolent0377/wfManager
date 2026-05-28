@@ -2,7 +2,7 @@ export function MarketPage() {
 
     return (
 
-        <div></div>
+        <div>This is the market</div>
 
     );
 
