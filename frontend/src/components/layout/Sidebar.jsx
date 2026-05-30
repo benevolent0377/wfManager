@@ -16,7 +16,7 @@ export function Sidebar() {
 
         <Link to="/"><div className="sidebar-item"><p>My Dashboard</p></div></Link>
 
-        <Link to="/worldstates"><div className="sidebar-item"><p>Live Data</p></div></Link>
+        <Link to="/worldstates"><div className="sidebar-item"><p>World States</p></div></Link>
 
         <Link to="/market"><div className="sidebar-item"><p>Market</p></div></Link>
 
