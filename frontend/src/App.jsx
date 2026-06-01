@@ -1,10 +1,7 @@
 import { Sidebar } from "./components/layout/Sidebar";
-import {DashboardPage} from "./pages/Dashboard";
-import {MarketPage} from "./pages/Market";
-import {ReliquaryPage} from "./pages/Reliquary";
-import {SettingsPage} from "./pages/Settings";
-import {Footer} from "./components/layout/Footer";
+import { Header } from "./components/layout/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { appRoutes } from "./routes/appRoutes";
 
 import "./themes/dark.css";
 import "./themes/light.css";
@@ -39,17 +36,20 @@ function AppFrame() {
         </div>
 
         <main className="content">
+        <div className="header-container">
+          <Header />
+        </div>
           <div className="content-wrapper">
             <Routes>
-              <Route path="/" element={<DashboardPage />} />
-              <Route path="/market" element={<MarketPage />} />
-              <Route path="/reliquary" element={<ReliquaryPage />} />
-              <Route path="/settings" element={<SettingsPage />} />
+              {appRoutes.map((route) => (
+                <Route
+                  key={route.path}
+                  path={route.path}
+                  element={route.element}
+                />
+              ))}
             </Routes>
           </div>
-            <div className="footerbar-wrapper">
-              <Footer />
-            </div>
         </main>
       </div>
     </div>

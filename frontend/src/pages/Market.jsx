@@ -1,4 +1,4 @@
-export function MarketPage() {
+export default function MarketPage() {
 
     return (
 

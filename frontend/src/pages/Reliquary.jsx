@@ -1,4 +1,4 @@
-export function ReliquaryPage() {
+export default function ReliquaryPage() {
 
     return (
         <div className="reliquary-page">
