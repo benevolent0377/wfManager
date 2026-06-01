@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./themes/dark.css";
 import "./themes/grineer.css";
 import "./themes/infested.css";
+import "./themes/corpus.css";
 import "./themes/orokin.css";
 import "./themes/App.css";
 import "./themes/solar.css";
@@ -27,7 +28,7 @@ function App() {
 
 function AppFrame() {
   return (
-    <div className="app-frame" data-theme="grineer">
+    <div className="app-frame" data-theme="lotus">
 
       <div className="app-body">
         <div className="sidebar-container">

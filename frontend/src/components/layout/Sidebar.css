@@ -4,8 +4,49 @@
     flex-direction: column;
     min-height: 100%;
 }
-.header-container {
-    padding: 5px;
+.logo-container {
+    height:75px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+}
+.logo-container .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    order: 2;
+    flex-grow: 4;
+}
+.logo-container .text-wrapper .title {
+    font-size: 24px;
+    order: 1;
+    font-weight: bold;
+    width: 100%;
+    margin: 0px;
+    padding: 7px;
+    padding-bottom: 0px;
+}
+.logo-container .text-wrapper .version-tag {
+    font-size: 10px;
+    order: 2;
+    color: var(--accent);
+    width: 100%;
+    margin: 0px;
+    padding-left: 7px;
+}
+.logo-container .logo {
+    padding: 10px;
+    height: auto;
+    max-width: 70px;
+    width: 100%;
+    order: 1;
+    flex-shrink: 2;
+
 }
 .sidebar-items {
     flex-grow: 4;

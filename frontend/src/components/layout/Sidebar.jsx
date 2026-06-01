@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Header } from "./Header";
 import {StatusDropdown} from "../status/StatusDropdown";
 import "../status/Status.css"
 import "./Sidebar.css";
@@ -8,8 +7,12 @@ export function Sidebar() {
   return (
     <aside className="sidebar">
 
-      <div className="header-container">
-        <Header />
+      <div className="logo-container">
+          <img src="/src/assets/logo.png" alt="Warframe Manager" className="logo" />
+          <div className="text-wrapper">
+            <p className="title">Warframe Manager</p>
+            <p className="version-tag">ALPHA 0.0.1</p>
+          </div>
       </div>
 
       <div className="sidebar-items">
