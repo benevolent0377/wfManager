@@ -54,6 +54,6 @@ export default async function getDateTimeNow() {
 
     const year = date.getFullYear();
 
-    return `${month} ${day} of ${year} @ ${hours}:${minutes}:${second} ${meridiem}`; 
+    return `${month} ${day}, ${year} @ ${hours}:${minutes}:${second} ${meridiem}`; 
 
 }

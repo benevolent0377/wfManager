@@ -7,6 +7,7 @@ import {Footer} from "./components/layout/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./themes/dark.css";
+import "./themes/light.css";
 import "./themes/grineer.css";
 import "./themes/infested.css";
 import "./themes/corpus.css";
@@ -17,6 +18,8 @@ import "./themes/lotus.css";
 import "./themes/light-soft-orokin.css";
 import "./themes/light-void-blue.css";
 import "./themes/void.css";
+import "./themes/cephalon-teal.css";
+import "./themes/cy.css";
 
 function App() {
   return (
@@ -28,7 +31,7 @@ function App() {
 
 function AppFrame() {
   return (
-    <div className="app-frame" data-theme="lotus">
+    <div className="app-frame" data-theme="cephalon-cy">
 
       <div className="app-body">
         <div className="sidebar-container">

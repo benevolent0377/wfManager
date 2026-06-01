@@ -1,30 +1,31 @@
-function StatusDot({ status }) {
+import {CircleEllipsis, CircleCheckBig, OctagonX} from "lucide-react";
 
-    let src = "/src/assets/status/offline-dot.svg";
-    let alt = "Offline";
+function StatusDot({ status }) {
 
     if (status === "online") {
 
-        src = "/src/assets/status/online-dot.svg";
-        alt = "Online";
-
+        return (
+                <CircleCheckBig className="status-dot online-dot" color="#4ade80"/>            
+        );
     }
     else if (
         status === "warning" ||
         status === "checking"
     ) {
 
-        src = "/src/assets/status/warning-dot.svg";
-        alt = "Warning";
+        return (
+                <CircleEllipsis className="status-dot warning-dot" color="#fbbf24"/>
+        );
     }
+    else {
 
-    return (
-        <img
-            className="status-dot"
-            src={src}
-            alt={alt}
-        />
-    );
+        return (
+
+                <OctagonX className="status-dot offline-dot" color="#fb7185"/>
+
+        );
+
+    }
 }
 
 export default StatusDot;

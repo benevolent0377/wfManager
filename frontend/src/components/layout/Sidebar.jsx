@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import {StatusDropdown} from "../status/StatusDropdown";
 import "../status/Status.css"
 import "./Sidebar.css";
+import {House, Earth, ChartCandlestick, Gem, Database, Backpack, Info, ChartNoAxesCombined, Blend, Code, Cog} from "lucide-react";
 
 export function Sidebar() {
   return (
@@ -17,25 +18,25 @@ export function Sidebar() {
 
       <div className="sidebar-items">
 
-        <Link to="/"><div className="sidebar-item"><p>My Dashboard</p></div></Link>
+        <Link to="/"><div className="sidebar-item"><House/><p>My Dashboard</p></div></Link>
 
-        <Link to="/worldstates"><div className="sidebar-item"><p>World States</p></div></Link>
+        <Link to="/worldstates"><div className="sidebar-item"><Earth/><p>World States</p></div></Link>
 
-        <Link to="/market"><div className="sidebar-item"><p>Market</p></div></Link>
+        <Link to="/market"><div className="sidebar-item"><ChartCandlestick/><p>Market</p></div></Link>
 
-        <Link to="/reliquary"><div className="sidebar-item"><p>Reliquary</p></div></Link>
+        <Link to="/reliquary"><div className="sidebar-item"><Gem/><p>Reliquary</p></div></Link>
 
-        <Link to="/drops"><div className="sidebar-item"><p>Drop Tables</p></div></Link>
+        <Link to="/drops"><div className="sidebar-item"><Database/><p>Drop Tables</p></div></Link>
 
-        <Link to="/inventory"><div className="sidebar-item"><p>Inventory</p></div></Link>
+        <Link to="/inventory"><div className="sidebar-item"><Backpack/><p>Inventory</p></div></Link>
 
-        <Link to="/codex"><div className="sidebar-item"><p>Codex</p></div></Link>
+        <Link to="/codex"><div className="sidebar-item"><Info/><p>Codex</p></div></Link>
 
-        <Link to="/analytics"><div className="sidebar-item"><p>Analytics</p></div></Link>
+        <Link to="/analytics"><div className="sidebar-item"><ChartNoAxesCombined/><p>Analytics</p></div></Link>
 
-        <Link to="/overlay"><div className="sidebar-item"><p>Overlay Options</p></div></Link>
+        <Link to="/overlay"><div className="sidebar-item"><Blend/><p>Overlay Options</p></div></Link>
 
-        <Link to="/developer"><div className="sidebar-item"><p>Developer Options</p></div></Link>
+        <Link to="/developer"><div className="sidebar-item"><Code/><p>Developer Settings</p></div></Link>
       
       </div>
 
@@ -49,7 +50,7 @@ export function Sidebar() {
 
         <div className="settings-container">
           <Link to="/settings">
-            <img src="src/assets/dark/settings-cog.png" className="settings-icon"/> 
+            <Cog/>
           </Link>
         </div>        
 
