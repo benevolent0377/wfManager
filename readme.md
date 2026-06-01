@@ -1,10 +1,4 @@
 # Warframe Manager
-
-![GitHub last commit](https://img.shields.io/github/last-commit/benevolent0377/wfManager)
-![GitHub issues](https://img.shields.io/github/issues/benevolent0377/wfManager)
-![GitHub stars](https://img.shields.io/github/stars/benevolent0377/wfManager)
-
-
 ![Status](https://img.shields.io/badge/status-active%20development-blue)
 ![Version](https://img.shields.io/badge/version-alpha%200.1-orange)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
@@ -15,6 +9,11 @@
 ![Platform](https://img.shields.io/badge/platform-linux%20%7C%20windows-lightgrey)
 ![Architecture](https://img.shields.io/badge/architecture-modular-success)
 ![Project](https://img.shields.io/badge/project-open--source-brightgreen)
+
+
+![GitHub last commit](https://img.shields.io/github/last-commit/benevolent0377/wfManager)
+![GitHub issues](https://img.shields.io/github/issues/benevolent0377/wfManager)
+![GitHub stars](https://img.shields.io/github/stars/benevolent0377/wfManager)
 
 > A lightweight desktop companion application for **Warframe**, focused on bringing game information, community resources, and player utilities into a single interface.
 
