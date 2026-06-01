@@ -3,13 +3,13 @@ import {StatusDropdown} from "../status/StatusDropdown";
 import "../status/Status.css"
 import "./Sidebar.css";
 import {House, Earth, ChartCandlestick, Gem, Database, Backpack, Info, ChartNoAxesCombined, Blend, Code, Cog} from "lucide-react";
-
+import {Logo} from "./Logo";
 export function Sidebar() {
   return (
     <aside className="sidebar">
 
       <div className="logo-container">
-          <img src="/src/assets/logo.png" alt="Warframe Manager" className="logo" />
+          <Logo className="logo" />
           <div className="text-wrapper">
             <p className="title">Warframe Manager</p>
             <p className="version-tag">ALPHA 0.0.1</p>

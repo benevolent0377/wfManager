@@ -31,7 +31,7 @@ function App() {
 
 function AppFrame() {
   return (
-    <div className="app-frame" data-theme="cephalon-cy">
+    <div className="app-frame" data-theme="solar">
 
       <div className="app-body">
         <div className="sidebar-container">

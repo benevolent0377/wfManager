@@ -6,7 +6,7 @@
     min-width: 100%;
 }
 .logo-container {
-    height:75px;
+    height: 100px;
     max-width: 100%;
     display: flex;
     align-items: center;
@@ -40,13 +40,24 @@
     margin: 0px;
     padding-left: 7px;
 }
-.logo-container .logo {
-    padding: 10px;
-    height: auto;
-    max-width: 70px;
-    width: 100%;
-    order: 1;
-    flex-shrink: 2;
+.logo {
+  width: 120px;
+  height: auto;
+  color: var(--accent);
+  overflow: visible;
+}
+@keyframes cephalonCore {
+    from {
+        color: var(--accent);
+    }
+
+    to {
+        color: var(--icon-hover);
+    }
+}
+
+.logo {
+    animation: cephalonCore 5s ease-in-out alternate infinite;
 }
 .sidebar-items {
     width: 100%;
@@ -129,6 +140,7 @@
 }
 .sidebar-item:hover {
     color: var(--text-h);
+
 }
 
 .sidebar-item:active {
