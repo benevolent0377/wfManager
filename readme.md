@@ -1,6 +1,6 @@
 # Warframe Manager
 
-> A modular desktop companion, overlay, and data-management platform for Warframe designed for advanced information access, API aggregation, workflow utilities, and in-game overlay systems.
+> A data-oriented, 3rd party, non-invasive, companion application for Warframe players.
 
 ![Status](https://img.shields.io/badge/status-active%20development-blue)
 ![Version](https://img.shields.io/badge/version-pre--alpha-orange)
