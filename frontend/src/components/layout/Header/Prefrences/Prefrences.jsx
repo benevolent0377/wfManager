@@ -23,6 +23,8 @@ export function PrefrencesDropdown() {
 
             {isOpen && (
                 <div className="prefrences-card">
+
+
                     
                 </div>
             )}

@@ -36,7 +36,7 @@ function App() {
 
 function AppFrame() {
   return (
-    <div className="app-frame" data-theme="tenno-steel">
+    <div className="app-frame" data-theme="grineer">
 
       <div className="app-body">
         <div className="sidebar-container">
