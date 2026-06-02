@@ -4,8 +4,8 @@ import getDateTimeNow from "../../../util/clock"
 import SearchBar from "./SearchBar";
 import { useLocation } from "react-router-dom";
 import { appRoutes } from "../../../routes/appRoutes";
-import Notifications from "./Notifications";
-import Prefrences from "./Prefrences";
+import Notifications from "./Notifications/Notifications";
+import Prefrences from "./Prefrences/Prefrences";
 
 export function Header() {
 
