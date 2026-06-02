@@ -20,6 +20,11 @@ import "./themes/light-void-blue.css";
 import "./themes/void.css";
 import "./themes/cephalon-teal.css";
 import "./themes/cy.css";
+import "./themes/jade.css";
+import "./themes/tenno-steel.css";
+import "./themes/orokin-gold.css";
+import "./themes/venus.css";
+import "./themes/murmur.css";
 
 function App() {
   return (
@@ -31,7 +36,7 @@ function App() {
 
 function AppFrame() {
   return (
-    <div className="app-frame" data-theme="corpus">
+    <div className="app-frame" data-theme="void">
 
       <div className="app-body">
         <div className="sidebar-container">
