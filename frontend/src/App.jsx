@@ -3,6 +3,9 @@ import { Header } from "./components/layout/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { appRoutes } from "./routes/appRoutes";
 
+import {SettingsPage} from "./pages/Settings";
+import {DeveloperPage} from "./pages/Developer";
+
 import "./themes/dark.css";
 import "./themes/light.css";
 import "./themes/grineer.css";
@@ -28,7 +31,7 @@ function App() {
 
 function AppFrame() {
   return (
-    <div className="app-frame" data-theme="solar">
+    <div className="app-frame" data-theme="corpus">
 
       <div className="app-body">
         <div className="sidebar-container">
@@ -48,6 +51,8 @@ function AppFrame() {
                   element={route.element}
                 />
               ))}
+              <Route path="/settings" element={<SettingsPage />} />
+              <Route path="/developer" element={<DeveloperPage />}/>
             </Routes>
           </div>
         </main>

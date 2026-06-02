@@ -53,6 +53,7 @@
 
     to {
         color: var(--icon-hover);
+        scale: 1.05;
     }
 }
 
