@@ -24,7 +24,7 @@ export function Sidebar() {
 
           return (
             <Link to={route.path} key={route.path}>
-              <div className="sidebar-item">
+              <div className="sidebar-item hover-popout">
                 <Icon />
                 <p>{route.title}</p>
               </div>
