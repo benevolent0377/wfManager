@@ -1,5 +1,5 @@
-import { Sidebar } from "./components/layout/Sidebar";
-import { Header } from "./components/layout/Header";
+import { Sidebar } from "./components/layout/Sidebar/Sidebar";
+import { Header } from "./components/layout/Header/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { appRoutes } from "./routes/appRoutes";
 

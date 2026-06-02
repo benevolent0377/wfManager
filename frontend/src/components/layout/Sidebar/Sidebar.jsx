@@ -1,9 +1,9 @@
 import { NavLink, Link } from "react-router-dom";
-import {StatusDropdown} from "../status/StatusDropdown";
-import "../status/Status.css"
+import {StatusDropdown} from "../../status/StatusDropdown";
+import "../../status/Status.css"
 import "./Sidebar.css";
 import { Cog } from "lucide-react";
-import { appRoutes } from "../../routes/appRoutes";
+import { appRoutes } from "../../../routes/appRoutes";
 import {Logo} from "./Logo";
 export function Sidebar() {
   return (
