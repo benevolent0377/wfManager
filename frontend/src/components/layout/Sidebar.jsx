@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import {StatusDropdown} from "../status/StatusDropdown";
 import "../status/Status.css"
 import "./Sidebar.css";
@@ -23,12 +23,14 @@ export function Sidebar() {
           const Icon = route.icon;
 
           return (
-            <Link to={route.path} key={route.path}>
-              <div className="sidebar-item hover-popout">
+            <NavLink to={route.path} key={route.path} className={({isActive}) => 
+              isActive
+              ? "sidebar-item hover-popout active"
+              : "sidebar-item hover-popout"
+            } >
                 <Icon />
                 <p>{route.title}</p>
-              </div>
-            </Link>
+            </NavLink>
           );
         })}
 

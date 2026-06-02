@@ -55,13 +55,13 @@ export const appRoutes = [
     element: <CodexPage />,
   },
   {
-    page: "/analytics",
+    path: "/analytics",
     title: "Analytics",
     icon: ChartNoAxesCombined,
     element: <AnalyticsPage />,
   },
   {
-    page: "/overlay",
+    path: "/overlay",
     title: "Overlay Options",
     icon: Blend,
     element: <OverlayPage />,

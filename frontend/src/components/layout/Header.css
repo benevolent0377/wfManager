@@ -20,6 +20,8 @@
     border: none;
     border-radius: 4px;
     width: 100%;
+    background-color: var(--secondary-bg);
+    color: var(--text);
 }
 .center {
     order: 2;
@@ -49,6 +51,9 @@
     cursor: pointer;
     border-radius: 4px;
     background-color: var(--secondary-bg);
+}
+.right .header-item .icon {
+    display: block;
 }
 .right .clock p{
     font-size: 12px;

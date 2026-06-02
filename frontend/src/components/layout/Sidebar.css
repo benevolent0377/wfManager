@@ -81,10 +81,14 @@
 
     transition: background 0.15s ease, color 0.15s ease;
 
-    background: radial-gradient(var(--gradient-a), var(--gradient-b));
+
 
     position: relative;
     overflow: hidden;
+}
+.sidebar-item.active {
+    background: radial-gradient(var(--gradient-a), var(--gradient-b));
+
 }
 .sidebar-item::after {
     content: "";
